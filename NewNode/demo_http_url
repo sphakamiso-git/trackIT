@@ -1,0 +1,8 @@
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(req.url);
+  res.end();
+}).listen(8080);
+/* The 'url' argument enables us to bring the part of the url that comes after the dommain. 
+for example, localhost:8080/summer will bring out /summer. This "Summer" is the part thatcomes after the url */
